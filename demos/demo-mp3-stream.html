@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+	<meta charset="UTF-8"/>
+	<title>ErgPlayer</title>
+	<link rel="stylesheet" href="../css/style.css"/>
+	<script src="../js/hls.min.js"></script>
+</head>
+<body>
+	<audio autoplay id="mediaPlayer" class="withMP3Stream">
+		<source src="http://streaming.radionomy.com/JamendoLounge" type="audio/mp3"/>
+	</audio>
+	<div id="mediaPlayerControls">
+		<strong class="fa fa-play playPause"></strong>&nbsp;<input type="range" id="durSlider" min="0" step="1"/>&nbsp;<span id="currentTime"></span>&nbsp;/&nbsp;<span id="duration"></span>
+	</div>
+	<script src="../js/jquery.min.js"></script>
+	<script src="../js/ergplayer.js"></script>
+</body>
+</html>
