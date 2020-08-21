@@ -27,6 +27,6 @@ where `yourstreamurl` can be replaced with the URL of your HLS stream.
 ## How to integrate it in your pages
 ErgPlayer supports iframe as integration type. You can add an iframe pointing to `/ErgPlayer/index.html` with this code on a part of your pages:
 ```html
-<iframe src="/ErgPlayer/index.html" style="width:308px;height:20px;border:0" allow="autoplay; encrypted-media"></iframe>
+<iframe src="/ErgPlayer/index.html" style="width:322px;height:20px;border:0" allow="autoplay; encrypted-media"></iframe>
 ```
 et voilà! The integration is done!
