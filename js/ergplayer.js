@@ -20,8 +20,10 @@ jQuery(".playPause").on("click", function() {
 
 jQuery("#durSlider").on("change", function() {
 	if (document.getElementById("mediaPlayer").paused) {
+		document.getElementById("mediaPlayer").play();
 		jQuery(".playPause").removeClass("fa-play").addClass("fa-pause");
 	} else {
+		document.getElementById("mediaPlayer").pause();
 		jQuery(".playPause").removeClass("fa-pause").addClass("fa-play");
 	}
 });
