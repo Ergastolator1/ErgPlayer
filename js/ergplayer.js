@@ -22,8 +22,6 @@ jQuery("#durSlider").on("change", function() {
 	if (document.getElementById("mediaPlayer").paused) {
 		document.getElementById("mediaPlayer").play();
 		jQuery(".playPause").removeClass("fa-play").addClass("fa-pause");
-	} else {
-		jQuery(".playPause").removeClass("fa-pause").addClass("fa-play");
 	}
 });
 
