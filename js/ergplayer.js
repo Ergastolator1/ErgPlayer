@@ -35,7 +35,7 @@ function convertiTempo(secondi) {
 	return (minuto + ":" + secondo);
 }
 
-document.getElementById("duration").innerHTML = convertiTempo(Math.round(document.getElementById("mediaPlayer").duration));
+setInterval(()=>{document.getElementById("duration").innerHTML = convertiTempo(Math.round(document.getElementById("mediaPlayer").duration)); document.getElementById("durSlider").max=Math.round(document.getElementById("mediaPlayer").duration)}, 250);
 
 function cambiaValoreDurationSlider() {
 	document.getElementById("mediaPlayer").currentTime = document.getElementById("durSlider").value;
