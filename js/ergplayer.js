@@ -18,6 +18,14 @@ jQuery(".playPause").on("click", function() {
 	}
 });
 
+jQuery("#durSlider").on("change", function() {
+	if (document.getElementById("mediaPlayer").paused) {
+		jQuery(".playPause").removeClass("fa-play").addClass("fa-pause");
+	} else {
+		jQuery(".playPause").removeClass("fa-pause").addClass("fa-play");
+	}
+});
+
 function aggiornaSlider() {
 	var arrotondaSecondi = Math.round(document.getElementById("mediaPlayer").currentTime);
 	document.getElementById("durSlider").value = arrotondaSecondi;
