@@ -1,10 +1,11 @@
 # ErgPlayer
 
-Welcome to the project's page of ErgPlayer, a HTML5 player that can play MP3 and HLS streams without a problem!
+Welcome to the project's page of ErgPlayer, a HTML5 player that can play MP3, HLS and MPEG-DASH streams without a problem!
 
 ## Libraries used for this project
 This project uses these JS libraries to work correctly:
-* hls.js (for HLS streams; without it it won't work properly);
+* hls.js (for HLS streams; without it they won't work properly);
+* dash.js (for MPEG-DASH streams; without it they won't work properly);
 * jQuery (for some things).
 
 ## Demos
@@ -15,11 +16,11 @@ Just download the repository, extract it in the "ErgPlayer" folder of your webro
 
 If you want to use a MP3 stream put `class="withMP3Stream"` before ending the audio starting tag. This prevents using the duration slider while playing a MP3 stream, making it so that it won't break the stream if you use it.
 
-Instead, if you want to use a HLS stream, remove the source tag, then put these contents inside the audio tag:
+Instead, if you want to use a HLS non-infinite length stream, remove the source tag, then put these contents inside the audio tag:
 ```
 class="withHLS" data-streamurl="yourstreamurl"
 ```
-where `yourstreamurl` can be replaced with the URL of your HLS stream.
+where `yourstreamurl` can be replaced with the URL of your HLS stream. You would also replace that with `class="withHLSStream"` if the HLS stream is infinite, so it would disable the duration slider making it so that it won't break as usual, or with `class="withDASH"` or `class="withDASHStream` if you want to play back MPEG-DASH streams.
 
 ## Supported audio tag attributes
 `autoplay`, `loop`, `preload`, `muted` and `src` (`src` should only be used if there is no `source` tag present inside the `audio` tag) are the supported audio tag attributes for this project. **DO NOT USE `controls`, OTHERWISE THE PROJECT'S CODE WILL BREAK!**
