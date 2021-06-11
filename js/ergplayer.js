@@ -1,8 +1,26 @@
 if (document.getElementById("mediaPlayer").classList.contains("withHLS") == true) {
-	document.getElementById("durSlider").disabled = true;
 	var hls = new Hls();
 	hls.attachMedia(document.getElementById("mediaPlayer"));
 	hls.loadSource(document.getElementById("mediaPlayer").dataset.streamurl);
+}
+if (document.getElementById("mediaPlayer").classList.contains("withHLSStream") == true) {
+        document.getElementById("durSlider").disabled = true;
+        var hls = new Hls();
+	hls.attachMedia(document.getElementById("mediaPlayer"));
+	hls.loadSource(document.getElementById("mediaPlayer").dataset.streamurl);
+}
+if (document.getElementById("mediaPlayer").classList.contains("withDASH") == true) {
+        (()=>{
+		var player=dashjs.MediaPlayer().create();
+		player.initialize(document.getElementById("mediaPlayer"), document.getElementById("mediaPlayer").dataset.streamurl, true);
+	});
+}
+if (document.getElementById("mediaPlayer").classList.contains("withDASHStream") == true) {
+        document.getElementById("durSlider").disabled = true;
+        (()=>{
+		var player=dashjs.MediaPlayer().create();
+		player.initialize(document.getElementById("mediaPlayer"), document.getElementById("mediaPlayer").dataset.streamurl, true);
+	});
 }
 if (document.getElementById("mediaPlayer").classList.contains("withMP3Stream") == true) {
 	document.getElementById("durSlider").disabled = true;
