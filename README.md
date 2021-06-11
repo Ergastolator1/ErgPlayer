@@ -5,7 +5,7 @@ Welcome to the project's page of ErgPlayer, a HTML5 player that can play MP3, HL
 ## Libraries used for this project
 This project uses these JS libraries to work correctly:
 * hls.js (for HLS streams; without it they won't work properly);
-* dash.js (for MPEG-DASH streams; without it they won't work properly);
+* dash.js (for MPEG-DASH streams; without it they won't work properly).
 
 ## Demos
 You can find some demos in the `demos/` folder of this project. If you want to use one of those as a starting point just copy the relative HTML file to the root folder of this project, remove the precedent `index.html` file, rename the file you copied to `index.html` and remove any `../` reference on the file.
