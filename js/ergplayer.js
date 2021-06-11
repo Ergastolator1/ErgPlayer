@@ -26,20 +26,23 @@ if (document.getElementById("mediaPlayer").classList.contains("withMP3Stream") =
 	document.getElementById("durSlider").disabled = true;
 }
 
-jQuery(".playPause").on("click", function() {
+document.querySelector(".playPause").addEventListener("click", function() {
 	if (document.getElementById("mediaPlayer").paused) {
 		document.getElementById("mediaPlayer").play();
-		jQuery(".playPause").removeClass("fa-play").addClass("fa-pause");
+		document.querySelector(".playPause").classList.remove("fa-play");
+		document.querySelector(".playPause").classList.add("fa-pause");
 	} else {
 		document.getElementById("mediaPlayer").pause();
-		jQuery(".playPause").removeClass("fa-pause").addClass("fa-play");
+		document.querySelector(".playPause").classList.remove("fa-pause");
+		document.querySelector(".playPause").classList.add("fa-play");
 	}
 });
 
-jQuery("#durSlider").on("change", function() {
+document.querySelector("#durSlider").addEventListener("change", function() {
 	if (document.getElementById("mediaPlayer").paused) {
 		document.getElementById("mediaPlayer").play();
-		jQuery(".playPause").removeClass("fa-play").addClass("fa-pause");
+		document.querySelector(".playPause").classList.remove("fa-play");
+		document.querySelector(".playPause").classList.add("fa-pause");
 	}
 });
 
@@ -67,4 +70,4 @@ function cambiaValoreDurationSlider() {
 	document.getElementById("currentTime").innerHTML = convertiTempo(document.getElementById("mediaPlayer").currentTime);
 }
 
-jQuery("#durSlider").on("change", cambiaValoreDurationSlider);
+document.querySelector("#durSlider").addEventListener("change", cambiaValoreDurationSlider);
